@@ -1,5 +1,5 @@
 html, body {
-    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(0, 0, 0) 24.9%, rgb(44, 44, 44) 25%, rgb(44, 44, 44) 49.9%, rgba(0,0,0,1) 50%, rgb(0, 0, 0) 74.9%, rgb(44, 44, 44) 75%);
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(0, 0, 0) 24.9%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 49.9%, rgba(0,0,0,1) 50%, rgb(0, 0, 0) 74.9%, rgb(0, 0, 0) 75%);
     padding: 0;
     margin: 0; }
 
@@ -22,7 +22,7 @@ div {
 }
 
 p{
-    font-size: min(60vw, 90vh);
+    font-size: min(70vw, 110vh);
     font-family: 'Montserrat', sans-serif;
 
 }
