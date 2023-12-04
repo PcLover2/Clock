@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:wght@700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Clock</title>
+</head>
+<body onload="startTime()">
+    <div id="div1">
+        <p id= 'text1'></p>
+    </div>
+    <div id="div2">
+        <p id= 'text2'></p>
+    </div>
+    <div id="div3">
+        <p id= 'text3'></p>
+    </div>
+    <div id="div4">
+        <p id= 'text4'></p>
+    </div>
+    <script>
+        
+function startTime() {
+  const today = new Date();
+  let hourint = today.getHours();
+  let minint = today.getMinutes();
+  minint = checkTime(minint);
+  hourint = checkTime(hourint);
+  let hour = hourint.toString();
+  let hour1 = hour.charAt(0);
+  let hour2 = hour.charAt(1);
+  let min = minint.toString();
+  let min1 = min.charAt(0);
+  let min2 = min.charAt(1);
+  document.getElementById('text1').innerHTML = hour1;
+  document.getElementById('text2').innerHTML = hour2;
+  document.getElementById('text3').innerHTML = min1;
+  document.getElementById('text4').innerHTML = min2;
+  setTimeout(startTime, 1000);
+}
+
+function lastDigit(n){
+     
+     // return the last digit
+     return (n % 10)
+ }
+
+function firstDigit(n)
+{
+     
+    // Find total number of digits - 1
+    let digits = Math.floor(Math.log(n)/Math.log(10))
+ 
+    // Find first digit
+    n = Math.floor(n / Math.pow(10, digits))
+ 
+    // Return first digit
+    return n;
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+    </script>
+</body>
